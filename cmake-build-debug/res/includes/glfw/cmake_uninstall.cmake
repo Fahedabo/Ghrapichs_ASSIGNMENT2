@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/fahedabukaf/Downloads/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/Users/fahedabukaf/Downloads/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/fahedabukaf/Desktop/myprojects/Ghrapics/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/Users/fahedabukaf/Desktop/myprojects/Ghrapics/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/fahedabukaf/Downloads/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt" files)
+file(READ "/Users/fahedabukaf/Desktop/myprojects/Ghrapics/BasicEngine-assignment 2-Final/cmake-build-debug/res/includes/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

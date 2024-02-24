@@ -1,4 +1,4 @@
-# Install script for directory: /Users/fahedabukaf/Downloads/BasicEngine-assignment 2-Final/res/includes/glfw/tests
+# Install script for directory: /Users/fahedabukaf/Desktop/myprojects/Ghrapics/BasicEngine-assignment 2-Final/res/includes/glfw/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
