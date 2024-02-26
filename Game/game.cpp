@@ -11,7 +11,6 @@ Ray UpdateRay(int j, int i, Surface* ob, bool update, Ray reflectedRay, parser* 
     float height = 2.0f / 800.0f;
 
     if (!update) {
-
         vec3 pixelCenter(-1 + width / 2, 1 - height / 2, 0);
         vec3 exactPixel = pixelCenter + vec3(j * width, -1 * (i * height), 0);
         vec3 eyeVec = scene->eye->getCoordinates();
