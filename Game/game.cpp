@@ -5,7 +5,6 @@
 #include "parser.cpp"
 #include "algorithm"
 
-
 Ray UpdateRay(int j, int i, Surface* ob, bool update, Ray reflectedRay, parser* scene) {
 
     float width = 2.0f / 800.0f;
