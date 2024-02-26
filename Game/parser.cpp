@@ -27,7 +27,7 @@ public:
         this->planes = new vector<Plane*>();
     };
  
-      void parseInputFile(string fileName)
+      void parse(string fileName)
       {
           int colindex = 0, posindex = 0, intindex = 0;
         
@@ -85,7 +85,7 @@ public:
               switch (l)
               {
               case 'e':
-                  this->eye = parseEye(x1, x2, x3, x4);
+                  this->eye = new Eye(x1, x2, x3);
                   break;
               case 'a':
                   this->ambientLight = new vec4(x1, x2, x3, x4);
@@ -109,38 +109,24 @@ public:
                   (colindex)++;
                   break;
               default:
-                  //objectDescriptor obj;
-                  if (x4 > 0)
+                  if (x4 > 0) // it is a sphere
                   {
                       Sphere* obj = parseSphere(l, x1, x2, x3, x4);
                       this->spheres->push_back(obj);
                       obj = this->spheres->at(this->spheres->size() - 1);
                       this->objects->push_back(obj);
-                      //  
+                 
                   }
-                  else
+                  else // it is a plane
                   {
                       Plane* obj = parsePlane(l, x1, x2, x3, x4);
                       this->planes->push_back(obj);
-
                       obj = this->planes->at(this->planes->size() - 1);
                       this->objects->push_back(obj);
-                      // 
+                   
                   }
               }
           }
-      }
-
-      void parseLine(char op, double x1, double x2, double x3, double x4,
-          vector<Surface*>* orderedObjects, int* nextColoredObject, int* nextSpotlightPosition, int* nextIntensityPosition)
-      {
-
-          
-      }
-
-      static Eye* parseEye(double x1, double x2, double x3, double x4)
-      {
-          return new Eye(x1, x2, x3);
       }
 
       Light* parseLightDirection(double x1, double x2, double x3, double x4)
