@@ -474,7 +474,7 @@ void Game::Init()
     AddShader("../res/shaders/pickingShader");
     AddShader("../res/shaders/basicShader");
     parser* p = new parser();
-    p->parseInputFile("../res/Scenes/scene1.txt");
+    p->parse("../res/Scenes/scene4.txt");
     unsigned char* data = rendering(p);
 
     AddTexture(800, 800, data);
